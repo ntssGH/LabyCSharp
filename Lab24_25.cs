@@ -12,7 +12,15 @@ namespace LabyCSharp
         {
             Console.WriteLine("Лабораторная работа 24-25 выполняется...");
 
-            int[] A = { 5, 8, 12, 3, 15, 7, 9, 10, 4, 11 };
+            Random rnd = new Random();
+            int[] A = new int[10];
+            for (int i = 0; i < A.Length; i++)
+            {
+                A[i] = rnd.Next(1, 21);
+            }
+
+            Console.WriteLine("Массив A: " + string.Join(", ", A));
+
             int firstIndex = -1;
             int lastIndex = -1;
 
