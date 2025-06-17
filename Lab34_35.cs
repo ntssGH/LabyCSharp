@@ -10,71 +10,46 @@ namespace LabyCSharp
     {
         public static void Run()
         {
-            Console.WriteLine("Лабораторная работа 34-35 выполняется...");
-
-            Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Вывод чисел от 1 до n (рекурсия)");
-            Console.WriteLine("2 - Вывод чисел от A до B (рекурсия)");
-
-            Console.Write("Ваш выбор: ");
-            string input = Console.ReadLine();
-
-            if (input == "1")
+            Console.Write("Введите неотрицательное целое m: ");
+            if (!long.TryParse(Console.ReadLine(), out long m) || m < 0)
             {
-                Console.Write("Введите число n: ");
-                if (int.TryParse(Console.ReadLine(), out int n) && n > 0)
-                {
-                    Console.Write("Результат: ");
-                    PrintNumbers(1, n);
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine("Ошибка: введите натуральное число.");
-                }
+                Console.WriteLine("Некорректное значение m");
+                return;
             }
-            else if (input == "2")
+
+            Console.Write("Введите неотрицательное целое n: ");
+            if (!long.TryParse(Console.ReadLine(), out long n) || n < 0)
             {
-                Console.Write("Введите число A: ");
-                if (!int.TryParse(Console.ReadLine(), out int a))
-                {
-                    Console.WriteLine("Ошибка: некорректный ввод A.");
-                    return;
-                }
-
-                Console.Write("Введите число B: ");
-                if (!int.TryParse(Console.ReadLine(), out int b))
-                {
-                    Console.WriteLine("Ошибка: некорректный ввод B.");
-                    return;
-                }
-
-                Console.Write("Результат: ");
-                PrintRange(a, b);
-                Console.WriteLine();
+                Console.WriteLine("Некорректное значение n");
+                return;
             }
+
+            try
+            {
+                long result = Ackermann(m, n);
+                Console.WriteLine($"A({m}, {n}) = {result}");
+            }
+            catch (StackOverflowException)
+            {
+                Console.WriteLine("Ошибка: превышена глубина рекурсии.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Произошла ошибка: {ex.Message}");
+            }
+
+            Console.WriteLine("Нажмите любую клавишу для выхода...");
+            Console.ReadKey();
+        }
+
+        private static long Ackermann(long m, long n)
+        {
+            if (m == 0)
+                return n + 1;
+            else if (n == 0)
+                return Ackermann(m - 1, 1);
             else
-            {
-                Console.WriteLine("Некорректный выбор.");
-            }
-
-            static void PrintNumbers(int current, int n)
-            {
-                if (current > n)
-                    return;
-
-                Console.Write(current + " ");
-                PrintNumbers(current + 1, n);
-            }
-
-            static void PrintRange(int a, int b)
-            {
-                Console.Write(a + " ");
-                if (a < b)
-                    PrintRange(a + 1, b);
-                else if (a > b)
-                    PrintRange(a - 1, b);
-            }
+                return Ackermann(m - 1, Ackermann(m, n - 1));
         }
     }
 }
