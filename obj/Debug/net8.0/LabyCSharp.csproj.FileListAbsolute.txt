@@ -17,3 +17,4 @@ C:\Users\ntss\source\repos\LabyCSharp\bin\Debug\net8.0\length.txt
 C:\Users\ntss\source\repos\LabyCSharp\bin\Debug\net8.0\books.txt
 C:\Users\ntss\source\repos\LabyCSharp\bin\Debug\net8.0\cars.txt
 C:\Users\ntss\source\repos\LabyCSharp\bin\Debug\net8.0\input_image56_57.jpg
+C:\Users\ntss\source\repos\LabyCSharp\obj\Debug\net8.0\LabyCSharp.sourcelink.json

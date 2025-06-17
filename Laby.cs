@@ -36,7 +36,7 @@ while (keepRunning)
     switch (input)
     {
         case "1":
-            Lab5.Run();
+            //Lab5.Run();
             break;
         case "2":
             Lab10_11.Run();
@@ -116,7 +116,7 @@ static void RunAllLabs()
 {
     Console.WriteLine("Выполнение всех лабораторных работ...");
 
-    Lab5.Run();
+    //Lab5.Run();
     Lab10_11.Run();
     Lab12_13.Run();
     Lab14_15.Run();

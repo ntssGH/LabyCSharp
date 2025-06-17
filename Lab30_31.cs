@@ -33,6 +33,15 @@ namespace LabyCSharp
                     }
                 }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Отсортировано по возрастанию:");
+            Console.WriteLine(string.Join(", ", nums));
+
+            Array.Reverse(nums);
+            Console.WriteLine();
+            Console.WriteLine("Отсортировано по убыванию:");
+            Console.WriteLine(string.Join(", ", nums));
         }
     }
 }
