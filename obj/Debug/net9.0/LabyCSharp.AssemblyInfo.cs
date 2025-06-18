@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabyCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2f734f62185d53bc6d1048af9ed6fb7696c2db6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28cf871737b1de12f4be82983ee5402a96ad9a6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabyCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabyCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

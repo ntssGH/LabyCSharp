@@ -33,7 +33,7 @@ namespace LabyCSharp
             Console.WriteLine("Задание 2: Массив марок автомобилей записан в файл cars56_57.txt.\n");
 
             // Задание 3: Нахождение самой длинной строки в файле
-            string filePath = "length.txt"; // Укажите путь к своему текстовому файлу
+            string filePath = "length.txt";
             string longestLine = "";
             try
             {
@@ -53,7 +53,7 @@ namespace LabyCSharp
 
             // Задание 4: Обработка массива случайных чисел
             Random random = new Random();
-            int N = 20; // Размер массива
+            int N = 20;
             int[] array = new int[N];
 
             // Заполнение массива случайными числами
@@ -81,7 +81,7 @@ namespace LabyCSharp
                 }
             }
 
-            Console.WriteLine("Задание 4: Массив с четными и нечетными индексами записан в файл output.txt.\n");
+            Console.WriteLine("Задание 4: Массив с четными и нечетными индексами записан в файл output56_57.txt.\n");
 
             // Вариант 3: Шифрование и дешифрование бинарного файла
             string inputFile = "input_image56_57.jpg"; // Исходный файл изображения

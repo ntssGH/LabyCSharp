@@ -28,6 +28,8 @@ while (keepRunning)
     Console.WriteLine("17 - Лабораторная работа 56-57");
     Console.WriteLine("18 - Лабораторная работа 60-61");
     Console.WriteLine("19 - Лабораторная работа 70-71");
+    Console.WriteLine("20 - Лабораторная работа 72-73");
+    Console.WriteLine("21 - Лабораторная работа 74-75");
     Console.WriteLine("0 - Выход");
     Console.Write("Введите номер: ");
 
@@ -92,6 +94,12 @@ while (keepRunning)
         case "19":
             Lab70_71.Run();
             break;
+        case "20":
+            Lab72_73.Run();
+            break;
+        case "21":
+            Lab74_75.Run();
+            break;
         case "777":
             RunAllLabs();
             break;
@@ -135,6 +143,7 @@ static void RunAllLabs()
     Lab56_57.Run();
     Lab60_61.Run();
     Lab70_71.Run();
-
+    Lab72_73.Run();
+    Lab74_75.Run();
     Console.WriteLine("Все лабораторные работы выполнены.");
 }
